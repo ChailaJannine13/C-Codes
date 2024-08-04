@@ -1,0 +1,254 @@
+#Topic 1:
+
+
+problem 1:
+
+#include <iostream>
+using namespace std;
+
+enum Week {
+    MON = 0,    // 0
+    TUE = 1,    // 1 
+    WED = 2,    // 2
+    THU = 3,    // 3
+    FRI = 4,    // 4
+    SAT = 5,    // 5
+    SUN = 6    // 6
+};
+
+int main() {
+	int day;
+    cout << "Enter day number: ";
+    cin >> day;
+
+    switch(day){
+        case MON:
+            cout<<"Monday";
+            break;
+        case TUE:
+            cout<<"Tuesday";
+            break;
+        case WED:
+            cout<<"Wednesday";
+            break;
+        case THU:
+            cout<<"Thursday";
+            break;
+        case FRI:
+            cout<<"Friday";
+            break;
+        case SAT:
+            cout<<"Saturday";
+            break;
+        case SUN:
+            cout<<"Sunday";
+            break;
+        default:
+            cout<<"Not valid";
+            break;
+    }
+
+
+    return 0;
+    
+    
+
+}
+
+
+problem 2:
+
+#include <iostream>
+using namespace std;
+
+enum DesignFlags {
+    BOLD = 53, 
+    ITALICS = 73,
+    UNDERLINE = 15
+};
+
+int main() {
+	int val;
+    cout << "Enter design flag value: ";
+    cin >> val;
+
+    switch(val){
+        case BOLD:
+            cout<<"BOLD";
+            break;
+        case ITALICS:
+            cout<<"ITALICS";
+            break;
+        case UNDERLINE:
+            cout<<"UNDERLINE";
+            break;
+        default:
+            cout<<"Not a valid design flag";
+            break;
+    }
+
+
+    return 0;
+    
+    
+
+}
+
+
+problem 3:
+
+
+#include <iostream>
+using namespace std;
+
+enum Suit {
+    CLUB = 1,
+    DIAMOND = 2,
+    HEART = 3,
+    SPADE = 4
+};
+
+int main() {
+
+    int val;
+    int n;
+
+    cout<<"Enter n: ";
+    cin>>n;
+    for(int i = 1; i<=n; i++){
+        cout << "Enter number "<<i<<": ";
+        cin >> val;
+        switch(val){
+            case CLUB:
+                break;
+            case DIAMOND:
+                break;
+            case HEART:
+                break;
+            case SPADE:
+                break;
+            default:
+                cout<<"Invalid suit!"<<endl;
+                i = i-1;
+                break;
+        }
+    }
+    
+
+
+    return 0;
+    
+    
+
+}
+
+
+problem 4:
+
+#include <iostream>
+using namespace std;
+
+enum Countries {
+    CANADA = 23,
+    THAILAND = 100,
+    VIETNAM = 33,
+    PHILIPPINES = 22,
+    SINGAPORE = 50,
+    CHINA = 98
+};
+
+int main(void) {
+
+    Countries country = PHILIPPINES;
+        switch(country){
+            case PHILIPPINES:
+                cout<<PHILIPPINES;
+                break;
+        }
+	
+}
+
+problem 5:
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+enum Currency {
+    PHP,
+    USD,
+    CAD,
+    GBP
+};
+
+int main() {
+	string currency;
+    cout << "Enter currency: ";
+    getline(cin,currency);
+
+    if(currency == "PHP"){
+        cout<<"Philippines";
+    }
+    else if(currency == "USD"){
+        cout<<"USA";
+    }
+    else if(currency == "CAD"){
+        cout<<"Canada";
+    }
+    else if(currency == "GBP"){
+        cout<<"Britain";
+    }
+    else{
+        cout<<"Currency not valid";
+    }
+
+    return 0;
+    
+    
+
+}
+
+
+problem 6:
+
+#include <iostream>
+using namespace std;
+
+enum Season {
+    SPRING = 1,
+    SUMMER = 2,
+    AUTUMN = 3,
+    WINTER = 4
+};
+
+int main() {
+	int val;
+    bool x = true;
+    while(x){
+        cout<<"Enter an integer: ";
+        cin>>val;
+        switch(val){
+            case SPRING:
+                cout<<"SPRING"<<endl;
+                break;
+            case SUMMER:
+                cout<<"SUMMER"<<endl;
+                break;
+            case AUTUMN:
+                cout<<"AUTUMN"<<endl;
+                break;
+            case WINTER:
+                cout<<"WINTER"<<endl;
+                break;
+            default:
+                x = false;
+                break;
+        }
+    }
+
+    return 0;
+    
+    
+
+}

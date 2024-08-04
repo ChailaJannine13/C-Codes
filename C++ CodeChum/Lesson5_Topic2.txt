@@ -1,0 +1,264 @@
+#Topic 2:
+
+
+problem 1:
+
+#include<iostream>
+using namespace std;
+
+void print2D(int arr1[10][10], int row, int col){
+    
+    for(int j=0; j<row;j++){
+          for(int i=0; i<col;i++){
+            cin>>arr1[j][i];
+        }
+    }
+    
+    cout<<"Array Values:"<<endl;
+    
+    for(int j=0;j<row;j++){
+        for(int i=0;i<col;i++){
+            cout<<arr1[j][i]<<" ";
+        }
+        cout<<endl;
+    }
+
+
+}
+
+int main(){
+
+    int row=0, col=0;
+    int arr[10][10];
+
+    cout<<"Enter number of rows: ";
+    cin>>row;
+    cout<<"Enter number of columns: ";
+    cin>>col;
+
+    print2D(arr,row,col);
+
+}
+
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+
+void print2D(int arr1[10][10], int row, int col){
+    int min;
+    int max = min;
+    for(int j=0; j<row;j++){
+          for(int i=0; i<col;i++){
+            cin>>arr1[j][i];
+            if(arr1[j][i]>max){
+                max = arr1[j][i];
+            }
+        }
+    }
+    
+    cout<<"Maximum Value: "<<max;
+
+}
+
+int main(){
+
+    int row=0, col=0;
+    int arr[10][10];
+    int maximum;
+
+    cout<<"Enter number of rows: ";
+    cin>>row;
+    cout<<"Enter number of columns: ";
+    cin>>col;
+
+    print2D(arr,row,col);
+
+}
+
+
+problem 3:
+
+#include<iostream>
+using namespace std;
+
+void print2D(int arr1[10][10], int row, int col,int find){
+    bool check = false;
+    for(int j=0; j<row;j++){
+          for(int i=0; i<col;i++){
+            cin>>arr1[j][i];
+        }
+    }
+
+    cout<<"Enter value to find: ";
+    cin>>find;
+    for(int j=0; j<row;j++){
+          for(int i=0; i<col;i++){
+            if(arr1[j][i]==find){
+                check = true;
+            }
+        }
+    }
+    if(check==true){
+        cout<<"yes";
+    }
+    else{
+        cout<<"no";
+    }
+
+}
+    
+
+int main(){
+
+    int row=0, col=0;
+    int arr[10][10];
+    int maximum;
+    int find=0;
+
+    cout<<"Enter number of rows: ";
+    cin>>row;
+    cout<<"Enter number of columns: ";
+    cin>>col;
+
+    
+    print2D(arr,row,col,find);
+ 
+
+}
+
+
+problem 4:
+
+#include<iostream>
+using namespace std;
+
+void print2D(int arr1[10][10], int row, int col){
+    bool check = true;
+    for(int j=0; j<row;j++){
+          for(int i=0; i<col;i++){
+            cin>>arr1[j][i];
+        }
+    }
+
+    cout<<"Even Values:"<<endl;
+    for(int j=0; j<row;j++){
+          for(int i=0; i<col;i++){
+            if(arr1[j][i]%2==0){
+                if(!check){
+                    cout<<", ";
+                }
+                cout<<arr1[j][i];
+                check = false;
+            }
+        }
+    }
+}
+    
+
+int main(){
+
+    int row=0, col=0;
+    int arr[10][10];
+
+    cout<<"Enter number of rows: ";
+    cin>>row;
+    cout<<"Enter number of columns: ";
+    cin>>col;
+
+    
+    print2D(arr,row,col);
+ 
+
+}
+
+
+problem 5:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+void print2D(float arr1[10][10], int row, int col){
+    bool check = true;
+    float product = col*row;
+    float sum =0;
+    float average = 0;
+    
+    for(int j=0; j<row;j++){
+          for(int i=0; i<col;i++){
+            cin>>arr1[j][i];
+        }
+    }
+     for(int j=0; j<row;j++){
+          for(int i=0; i<col;i++){
+            sum+=arr1[j][i];
+        }
+    }
+    average = sum/product;
+    cout<<fixed<<setprecision(2)<<"Average: "<<average;    
+}
+
+    
+
+int main(){
+
+    int row=0, col=0;
+    float arr[10][10];
+
+    cout<<"Enter number of rows: ";
+    cin>>row;
+    cout<<"Enter number of columns: ";
+    cin>>col;
+
+    
+    print2D(arr,row,col);
+ 
+
+}
+
+
+problem 6:
+
+#include<iostream>
+using namespace std;
+
+void print2D(int arr1[10][10], int row, int col,int start,int end){
+    int numRows, numCol;
+    int sum=0;
+    for(int j=0; j<row;j++){
+          for(int i=0; i<col;i++){
+            cin>>arr1[j][i];
+        }
+    }
+    cout<<"Sum starts at: ";
+    cin>>start;
+    cout<<"Sum ends at: ";
+    cin>>end;
+    for(int j=0; j<row;j++){
+          for(int i=0; i<col;i++){
+            if(arr1[j][i]>=start && arr1[j][i]<=end){
+                sum+=arr1[j][i];
+            }
+        }
+    }
+    cout<<"Sum: "<<sum;
+}
+int main(){
+
+    int row=0, col=0;
+    int arr[10][10];
+    int starts, ends;
+
+    cout<<"Enter number of rows: ";
+    cin>>row;
+    cout<<"Enter number of columns: ";
+    cin>>col;
+
+
+    
+    print2D(arr,row,col,starts, ends);
+ 
+
+}

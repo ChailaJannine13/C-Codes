@@ -1,0 +1,22 @@
+#Topic 1:
+
+
+Grouping Data
+
+Using Indices
+
+Facilitating the organization of related data items into a  coherent structure
+
+By Streamlining iterative processes and efficiently handling sizable dataset
+
+Dynamic Memory allocation techniques enable resizing to cater to varying data volumes
+
+Efficient storage and access
+
+0 to arraySize -1
+
+facilitating iteration and operation execution
+
+Support for diverse data type
+
+They facilitate efficient data storage and manipulation

@@ -1,0 +1,126 @@
+#Topic 3:
+
+
+problem 1:
+
+#include <iostream>
+using namespace std;
+
+int computeProduct() {
+  int a = 23, b = 5, c = 10; 
+    int product = a*b*c;
+    cout<<product;
+    return product;
+}
+
+int main(void) {
+    computeProduct();
+    return 0;
+}
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+int addTen(){
+    int z=0;
+    
+    cout<<"Enter an integer: ";
+    cin>>z;
+    int y=z+10;
+    cout<<y;
+    return y;
+}
+int main(){
+    
+    addTen();
+}
+
+problem 3:
+
+#include<iostream>
+using namespace std;
+
+char combineChars(){
+    char a,b;
+    cout<<"Enter first character: ";
+    cin>>a;
+    cout<<"Enter second character: ";
+    cin>>b;
+    cout<<a<<b;
+    return a,b;
+}
+int main(){
+    combineChars();
+}
+
+
+problem 4:
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+float computeSumOfNumbers() {
+    float a, b, c;
+    cout << "Enter first number: ";
+    cin >> a;
+    cout << "Enter second number: ";
+    cin >> b;
+    cout << "Enter third number: ";
+    cin >> c;
+    cout<<fixed<<setprecision(2)<<a+b+c;
+    return a,b,c;
+}
+
+int main(void) {
+    computeSumOfNumbers();
+}
+
+problem 5:
+
+#include<iostream>
+using namespace std;
+
+int return10(){
+    int x=10;
+    return x;
+}
+
+int main(){
+    int total;
+    int y=return10();
+    int z=return10();
+    int i=return10();
+    cout<<"Total: "<<y+z+i;
+    
+}
+
+
+problem 6:
+
+#include<iostream>
+using namespace std;
+
+int getIntegers(){
+    int arr[3];
+    cout<<"Enter first integer: ";
+    cin>>arr[0];
+    cout<<"Enter second integer: ";
+    cin>>arr[1];
+    cout<<"Enter third integer: ";
+    cin>>arr[2];
+     for(int x=0;x<3;x++){
+        cout<<arr[x];
+         if(x<3-1){
+             cout<<", ";
+         }
+    }
+    return arr[2];
+}
+int main(){
+    int arr[3]; 
+    arr[2]=getIntegers(); 
+    
+   
+}

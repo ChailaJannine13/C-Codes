@@ -1,0 +1,153 @@
+#Topic 1:
+
+
+problem 1:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+      int i;
+        
+        cout<<"Enter a number: ";
+        cin>>i;
+    
+    while(i%3!=0 && i%5!=0 && i%7!=0){
+         i++;
+        
+    }
+    cout<<"Final value of n: "<<i;
+}
+
+
+problem 2:
+
+#include <iostream>
+using namespace std;
+void processtotals(int x, int y){
+        int total=0;
+        while(total!=x){
+            total=total+y;
+            cout<<"Total: "<<total<<endl;
+            if(total==102){
+                break;
+            }
+        }
+}
+int main(void) {
+	int total = 0;
+    bool b = true;
+    int x;
+    int y;
+    int temp;
+
+    cout<<"Enter x: ";
+    cin>>x;
+    cout<<"Enter y: ";
+    cin>>y;
+
+    if(x<y){
+        cout<<"Total: "<<y;
+    }
+    else if(x>y){
+        processtotals(x,y);
+    }
+    else{
+        
+    }
+    
+    
+}
+
+
+problem 3:
+
+#include <iostream>
+using namespace std;
+
+int main(void) {
+	int i = 1;
+
+    while (i <= 100) {
+        cout << i << endl;
+      
+        i += 1;
+    } 
+}
+
+
+problem 4:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int remaining_value;
+    int subtrahend;
+    int temp;
+
+    cout<<"Enter a value: ";
+    cin>>remaining_value;
+    cout<<endl;
+    if(remaining_value>0){
+        while(remaining_value>0){
+            cout<<"Enter subtrahend: ";
+            cin>>subtrahend;
+            
+            temp=remaining_value;
+            if(remaining_value!=0){
+                remaining_value=remaining_value-subtrahend;
+                
+                cout<<temp<<" - "<<subtrahend<<" = "<<remaining_value<<endl;
+            }
+        }
+    }
+    
+}
+
+
+problem 5:
+
+#include <iostream>
+using namespace std;
+
+int main(void) {
+	int i;
+    cout << "Enter i: ";
+    cin >> i;
+
+    while (i < 100) {
+        if (i % 2 == 0) {
+            cout << i << endl;
+        }
+        i++;
+    }
+}
+
+
+problem 6:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){
+
+    double x,y,temp;
+    cout<<"Enter start: ";
+    cin>>y;
+    cout<<endl;
+
+    while(y<0){
+        cout<<"Enter a decimal number: ";
+        cin>>x;
+        y=y+x;
+        cout<<fixed<<setprecision(2)<<"Start current value: "<<y<<endl<<endl;
+    }
+    
+    
+}

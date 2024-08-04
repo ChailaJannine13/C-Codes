@@ -1,0 +1,160 @@
+#Topic 2:
+
+
+problem 1:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int x;
+   
+    cout<<"Enter an integer: ";
+    cin>>x;
+    string temp = to_string(x);
+   
+    do{
+        
+    }while(false);
+    if(temp=="-123"){
+        temp.erase(1, 1);
+        cout<<"Number of digits: "<<temp.length();
+    }
+    else{
+        cout<<"Number of digits: "<<temp.length();
+    }
+}
+
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    char x;
+    
+
+    do{
+        cout<<"Enter a character: ";
+        cin>>x;
+        cout<<x<<endl;
+        
+    }while(x!='A'&& x!='a' && x!='E'&& x!='e'&& x!='I'&& x!='i'&& x!='O'&& x!='o'&& x!='U'&& x!='u');
+
+        
+}
+
+
+problem 3:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int x,y;
+    int temp;
+    int sum;
+    bool z = true;
+
+    cout<<"Enter target value: ";
+    cin>>x;
+    cout<<"Enter the values: "<<endl;
+    do{
+        
+        if(y!=-1){
+            cin>>y;
+            sum+=y;
+            if(y==-1){
+                z=false;
+            }
+        
+        }
+            
+    }while(x>sum && z==true);
+        if(z==false){
+            cout<<"Sum: "<<sum+1;
+        }
+        else{
+            cout<<"Sum: "<<sum;
+        }
+}
+
+
+problem 4:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    char x;
+    bool y = false;
+    bool z = false;
+
+    do{
+        cout<<"Do you still want to play [Y/N]: ";
+        cin>>x;
+        if(x!='Y' && x!='y' && x!='N' && x!='n'){
+            cout<<"Wrong answer"<<endl;
+        }
+        else if(x=='Y' ||x=='y'){
+            y==true;
+        }
+        else if(x=='N' ||x=='n'){
+            break;
+        }
+
+    }while(y!=true && z!=true);
+    
+}
+
+
+problem 5:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int x;
+    int sum;
+        cout<<"Enter an integer: "<<endl;
+    do{
+        
+        cin>>x;
+
+        sum+=x;
+        
+        
+    }while(x!=0);
+    
+        cout<<"Total Sum: "<<sum;
+    
+}
+
+problem 6:
+
+#include <iostream>
+using namespace std;
+
+int main(void) {
+
+
+        int n;
+    
+    do {
+        
+        cout << "Enter value: ";
+        cin >> n;
+        
+    } while(n % 3 != 0 || n % 5 != 0);
+
+    return 0;
+}

@@ -1,0 +1,130 @@
+#Topic 4:
+
+
+problem 1:
+
+#include<iostream>
+using namespace std;
+
+void ageTeller(int age){
+    cout<<"Your age is ";
+    cout<<age;
+}
+
+int main(){
+    int x;
+    cout<<"Enter your age: ";
+    cin>>x;
+
+    ageTeller(x);
+}
+
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+void sumOfIntegers(int a,int b,int c){
+
+    int sum;
+    sum=a+b+c;
+    cout<<sum;
+}
+int main(){
+    int a,b,c;
+    cout<<"Enter first integer: ";
+    cin>>a;
+    cout<<"Enter second integer: ";
+    cin>>b;
+    cout<<"Enter third integer: ";
+    cin>>c;
+    sumOfIntegers(a,b,c);
+}
+
+
+problem 3:
+
+#include<iostream>
+#include<cctype>
+using namespace std;
+
+void withLowerCase(char a){
+    a= tolower(a);
+    cout<<a;
+}
+int main(){
+    char a;
+    cout<<"Enter a character: ";
+    cin>>a;
+    cout<<a;
+    withLowerCase(a);
+}
+
+
+problem 4:
+
+#include <iostream>
+using namespace std;
+
+void printProduct(int a, int b) {
+     int product = a * b;
+    cout << "Product = " << product << endl;
+}
+
+int main(void) {
+    int x, y;
+    cout << "Enter x: ";
+    cin >> x;
+    cout << "Enter y: ";
+    cin >> y;
+    printProduct(x, y);
+}
+
+
+problem 5:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+void max(double a, double b){
+
+    if(a<b){
+        cout<<fixed<<setprecision(2)<<b;
+    }
+    else{
+        cout<<fixed<<setprecision(2)<<a;
+    }
+        
+}
+int main(){
+    double a,b;
+    cout<<"Enter first decimal number: ";
+    cin>>a;
+    cout<<"Enter second decimal number: ";
+    cin>>b;
+    max(a,b);
+}
+
+
+problem 6:
+
+#include<iostream>
+using namespace std;
+
+void reverseInt(int a){
+    int reverse=0;
+    int remainder;
+    while(a!=0){
+        remainder=a%10;
+        reverse = reverse*10+remainder;
+        a/=10;
+    }
+    cout<<reverse;
+}
+int main(){
+    int x;
+    cout<<"Enter an integer: ";
+    cin>>x;
+    reverseInt(x);
+}

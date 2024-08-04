@@ -1,0 +1,128 @@
+#Topic 1:
+problem 1:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int age;
+    cout<<"Enter your age: ";
+    cin>>age;
+
+    if(age>=18){
+        cout<<age;
+        cout<<"\nadult";
+    }
+    else{
+        cout<<age;
+    }
+}
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int a,b;
+    cout<<"Enter first integer: ";
+    cin>>a;
+
+    cout<<"Enter second integer: ";
+    cin>>b;
+
+    cout<<a<<" "<<b;
+    
+    if(a==b){
+        cout<<"\nequal";
+    }
+}
+
+problem 3:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){
+
+    double a,b;
+
+    cout<<"Enter first decimal number: ";
+    cin>>a;
+
+    cout<<"Enter second decimal number: ";
+    cin>>b;
+
+    cout<<fixed<<setprecision(2)<<a<<" "<<b;
+
+    if(a>b){
+        cout<<"\nThe first one is greater than the second one";
+    }
+    
+}
+
+problem 4:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    char a;
+    cout<<"Enter a single character: ";
+    cin>>a;
+
+    cout<<a;
+
+    if(a=='A'||a=='E'||a=='I'||a=='O'||a=='U'||a=='a'||a=='e'||a=='i'||a=='o'||a=='u'){
+        cout<<"\nvowel";
+    }
+}
+problem 5:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    char a;
+    cout<<"Enter a single character: ";
+    cin>>a;
+
+    cout<<a;
+
+    if(a=='A'||a=='E'||a=='I'||a=='O'||a=='U'||a=='a'||a=='e'||a=='i'||a=='o'||a=='u'){
+        cout<<"\nvowel";
+    }
+}
+
+problem 6:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){
+
+    double a,b,c;
+    double temp;
+    cout<<"Enter first decimal number: ";
+    cin>>a;
+    cout<<"Enter second decimal number: ";
+    cin>>b;
+    cout<<"Enter third decimal number: ";
+    cin>>c;
+
+    temp = a+b;
+
+    if(temp<c){
+        cout<<fixed<<setprecision(2)<<a<<" "<<b<<" "<<c;
+    }
+    else
+        cout<<fixed<<setprecision(2)<<a<<" "<<b;
+}

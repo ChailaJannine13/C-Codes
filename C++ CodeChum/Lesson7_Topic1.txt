@@ -1,0 +1,104 @@
+#Topic 1:
+
+
+problem 1:
+
+#include<iostream>
+using namespace std;
+
+int main(void) {
+    int num = 5;
+    int* address = &num;
+
+    if (address == &num) {
+        cout << "Address printed!";
+    }
+
+    return 0;
+}
+
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+
+int main(void) {
+    int num = 5;
+    int* a = &num;
+
+    cout<<"Value: "<<*a;
+
+    return 0;
+}
+
+
+problem 3:
+
+#include<iostream>
+using namespace std;
+
+int main(void) {
+    int num = 5;
+    int* a = &num;
+    *a = 999;
+
+    cout<<"Value: "<<*a;
+
+    return 0;
+}
+
+
+problem 4:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(void) {
+    float num;
+    float* a = &num;
+    
+    cout<<fixed<<setprecision(2)<<"Enter a value: ";
+    cin>>num;
+    cout<<fixed<<setprecision(1)<<"Value: "<<*a;
+
+    return 0;
+}
+
+
+problem 5:
+
+#include<iostream>
+
+using namespace std;
+
+int main(void) {
+    int num;
+    int* a = &num;
+    int num1;
+    int* b = &num1;
+    cout<<"Enter first integer: ";
+    cin>>num;
+    cout<<"Enter second integer: ";
+    cin>>num1;
+    cout<<"Sum of two integers: "<<*a + *b;
+
+    return 0;
+}
+
+
+problem 6:
+
+#include<iostream>
+using namespace std;
+
+int main(void) {
+    char a = 'J';
+    char* ptr1 = &a;
+    char* ptr2 = &*ptr1;
+    
+    cout << "Value of character = " << *ptr2;
+    
+    return 0;
+}

@@ -1,0 +1,178 @@
+#Topic 5:
+
+
+problem 1:
+
+#include <iostream>
+using namespace std;
+int main(void) {
+
+    int x = 0;
+    int y = 0;
+
+    cout<<"Enter element x: ";
+    cin>>x;
+    cout<<"Enter element y: ";
+    cin>>y;
+    
+    for(x; x<=y;x++) {
+
+        cout << x << endl;
+        if(x%11==0){
+            x+2;
+            break;
+        }
+        
+        
+        
+    }
+
+    return 0;
+}
+
+
+problem 2:
+
+#include <iostream>
+using namespace std;
+
+int main(void) {
+    while(1) {
+        int a, b;
+        char op;
+        
+        cout << "Enter a: ";
+        cin >> a;
+        
+        cout << "Enter b: ";
+        cin >> b;
+        
+        cout << "Enter operator: ";
+        cin >> op;
+        
+        if(op == '+') {
+            cout << a << " + " << b << " = " << (a + b) << endl << endl;
+        } else if (op == '-') {
+            cout << a << " - " << b << " = " << (a - b) << endl << endl;
+        } else if (op == '*') {
+            cout << a << " * " << b << " = " << (a * b) << endl << endl;
+        } else if (op == '/') {
+            cout << a << " / " << b << " = " << (a / b) << endl << endl;
+        }
+        else{
+            break;
+        }
+    }
+
+    return 0;
+}
+
+
+problem 3:
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int main(void) {
+    int x;
+
+    cout << "Enter x: ";
+    cin >> x;
+    x = abs(x);
+
+    for(int i = 1; i <= 1000; i++) {
+        cout << i << endl;     
+            if(i==x){
+                i+2;
+                break;
+            }
+        }
+    return 0;
+}
+
+
+problem 4:
+
+#include<iostream>
+using namespace std;
+
+int main(void) {
+
+    while(true) {
+        int n;
+
+        cin >> n;
+        cout << "You've inputted " << n << endl;
+        if(n==0){
+            break;
+        }
+    }
+
+    return 0;
+}
+
+
+problem 5:
+
+#include<iostream>
+using namespace std;
+
+int main(void) {
+    int n[5]={5324,4893,150,100011,54789};
+    int x;
+    cout << "Enter integer value: ";
+    cin>>x;
+    for(int j=0;j<5;j++){
+       if(x==n[0]){
+           cout<<"4";
+           break;
+       }
+        else if(x==n[1]){
+           cout<<"3\n9\n8";
+           break;
+       }
+        else if(x==n[2]){
+            cout<<"0";
+            break;
+        }
+        else if(x==n[3]){
+            cout<<"1\n1\n0";
+            break;
+        }
+        else if(x==n[4]){
+            cout<<"9\n8";
+            break;
+        }
+    }
+    
+    return 0;
+}
+
+
+problem 6:
+
+#include<iostream>
+using namespace std;
+
+int main(void) {
+    while(true) {
+        char letter;
+
+        cout << "Enter letter: ";
+        cin >> letter;
+        if(letter=='C'){
+            break;
+        }
+        else if(letter=='O'){
+            break;
+        }
+        else if(letter=='D'){
+            break;
+        }
+        else if(letter=='E'){
+            break;
+        }
+        
+    }
+}

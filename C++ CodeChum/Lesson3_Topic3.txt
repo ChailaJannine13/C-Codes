@@ -1,0 +1,232 @@
+#Topic 3:
+
+
+problem 1:
+
+#include <iostream>
+using namespace std;
+
+int main(void) {
+
+    int numArray[2][4] = {{1, 2, 3, 4}, {3, 5, 7, 9}};
+
+    for(int x=0;x<4;x++){
+        cout<<numArray[0][x];
+        if(x<3){
+            cout<<", ";
+        }
+    }
+    cout<<endl;
+    for(int t=0;t<4;t++){
+        cout<<numArray[1][t];
+        if(t<3){
+            cout<<", ";
+        }
+    }
+    
+    
+}
+
+
+problem 2:
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+    int c,r;
+    int x[10][10];
+    
+
+    cout<<"Enter number of rows: ";
+    cin>>r;
+    cout<<"Enter number of columns: ";
+    cin>>c;
+
+    
+    for(int y=0; y<r;y++){
+           for(int z=0;z<c;z++){
+            cout<<"Enter element at row "<<y<<", column "<<z<<": ";
+            cin>>x[y][z];
+        }
+    }
+    for(int i=r-1;i>=0;i--){
+         for(int s=c-1;s>=0;s--){
+            cout<<x[i][s]<<"\t";
+    }
+        cout<<endl;
+}
+     
+}
+
+
+problem 3:
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+    int c,r;
+    int x[10][10];
+    int element;
+    bool z=false;
+
+    cout<<"Enter number of rows: ";
+    cin>>r;
+    cout<<"Enter number of columns: ";
+    cin>>c;
+
+    
+    for(int y=0; y<r;y++){
+           for(int z=0;z<c;z++){
+            cout<<"Enter element at row "<<y<<", column "<<z<<": ";
+            cin>>x[y][z];
+        }
+    }
+    cout<<"Enter x: ";
+    cin>>element;
+    bool found = false;
+    for(int i=0;i<r;i++){
+         for(int s=0;s<c;s++){
+            if(x[i][s]==element){
+                found=true;
+                break;
+            }  
+        }   
+        if(found){
+            break;
+        }
+    }
+    if(found){
+        cout<<"Found!";
+    }
+    else{
+        cout<<"Sorry, "<<element<<" not found.";
+    }
+}
+
+
+problem 4:
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+    int c,r;
+    int x[10][10];
+    int i=0;
+    bool q=true;
+    bool p=true;
+
+    cout<<"Enter number of rows: ";
+    cin>>r;
+    cout<<"Enter number of columns: ";
+    cin>>c;
+
+    
+    for(int y=0; y<r;y++){
+           for(int z=0;z<c;z++){
+            cout<<"Enter element at row "<<y<<", column "<<z<<": ";
+            cin>>x[y][z];
+        }
+    }
+    cout<<"Divisible by 3: ";
+    for(int i=0;i<r;i++){
+         for(int s=0;s<c;s++){
+            if(x[i][s]%3==0){
+                if(!q){
+                    cout<<", ";
+                }
+                cout<<x[i][s];
+                q=false;
+            }
+        }
+    }   
+     cout<<endl;
+        cout<<"Divisible by 5: ";
+        for(int i=0;i<r;i++){
+         for(int s=0;s<c;s++){
+            if(x[i][s]%5==0){ 
+                if(!p){
+                    cout<<", ";
+                }
+                cout<<x[i][s];
+                p=false;
+            }
+        }   
+    }
+}
+
+
+problem 5:
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+    int c,r;
+    int x[10][10];
+    int i=0;
+    bool q=true;
+    bool p=true;
+
+    cout<<"Enter number of rows: ";
+    cin>>r;
+    cout<<"Enter number of columns: ";
+    cin>>c;
+
+    
+    for(int y=0; y<r;y++){
+           for(int z=0;z<c;z++){
+            cout<<"Enter element at row "<<y<<", column "<<z<<": ";
+            cin>>x[z][y];
+        }
+    }
+    for(int y=0;y<c;++y){
+        for(int z=0;z<r;++z){
+             cout<<x[y][z]<<" ";   
+        }
+        cout<<endl;
+    }
+
+    return 0;
+     
+}
+
+
+problem 6:
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+    int c,r;
+    int x[10][10];
+    int XL = x[0][0];
+    cout<<"Enter number of rows: ";
+    cin>>r;
+    cout<<"Enter number of columns: ";
+    cin>>c;
+
+    
+    for(int y=0; y<r;y++){
+           for(int z=0;z<c;z++){
+            cout<<"Enter element at row "<<y<<", column "<<z<<": ";
+            cin>>x[y][z];
+        }
+    }
+     for(int y=0;y<r;y++){
+         for(int z=0;z<c;z++){
+            if(x[y][z]>XL){
+                XL=x[y][z];
+            }
+         }    
+     }
+    cout<<"Largest: "<<XL;
+    return 0;
+}

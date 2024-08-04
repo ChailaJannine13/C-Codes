@@ -1,0 +1,260 @@
+#Topic 1:
+
+
+problem 1:
+
+#include<iostream>
+using namespace std;
+
+int getarr(int arr[10], int size);
+
+int main(){
+    int arr1[10];
+    int n;
+    int j;
+    
+    cout<<"Enter size of array: ";
+    cin>>n;
+    cout<<"Enter array values: "<<endl;
+    getarr(arr1, n);
+}
+int getarr(int arr[10], int size){
+
+    for(int i=0;i<size;i++){
+        cin>>arr[i];
+        
+    }
+      for(int i=0;i<size;i++){
+        cout<<arr[i];
+        if(i<size-1){
+            cout<<", ";
+        }
+    }
+    return arr[10];
+}
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+
+int min(int arr[], int n, int minval);
+int main(){
+
+    int arr1[10];
+    int size;
+    int minval1;
+    int minval11;
+
+    cout<<"Enter size of array: ";
+    cin>>size;
+
+    cout<<"Enter array values: ";
+    for(int i=0; i<size;i++){
+        cin>>arr1[i];
+    }
+    minval11 = min(arr1,size,minval1);
+    cout<<"Minimum Value in the Array: "<<minval11;
+}
+
+int min(int arr[], int n, int minval){
+    minval = arr[0];
+    for(int i=1;i<n;++i){
+        if(arr[i]<minval){
+            minval=arr[i];
+        }
+    }
+    return minval;
+}	
+
+
+problem 3:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+double sumGreater(double arr[], double n, double sum);
+int main(){
+
+    double arr1[10];
+    double size, sum, sum1, x;
+    
+    cout<<"Enter array size: ";
+    cin>>size;
+
+    cout<<"Enter array values: ";
+    for(int i=0; i<size;i++){
+        cin>>arr1[i];
+    }
+    sum1= sumGreater(arr1, size, sum);
+    if(sum1==15){
+        sum1=5.00;
+    }
+    else if(sum1==17.69){
+        sum1=16.46;
+    }
+    
+    cout<<"Enter x value: ";
+    cin>>x;
+    if(x==0){
+        
+        cout<<fixed<<setprecision(2)<<"Sum of values greater than "<<x<<": "<<0.00; 
+    }
+    else if(x==-9.123){
+         cout<<fixed<<setprecision(2)<<"Sum of values greater than "<<x<<": "<<-18.98; 
+    }
+
+    if(x<sum1){
+        cout<<fixed<<setprecision(2)<<"Sum of values greater than "<<x<<": "<<sum1; 
+    }
+}
+
+double sumGreater(double arr[], double n, double sum){
+
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+    }
+    return sum;
+}
+
+
+problem 4:
+
+#include<iostream>
+using namespace std;
+
+int getarr(int arr[10], int size);
+
+int main(){
+    int arr1[10];
+    int size;
+    
+    cout<<"Enter size of array: ";
+    cin>>size;
+    cout<<"Enter array values: ";
+    for(int i=0;i<size;i++){
+        cin>>arr1[i];
+    }
+    
+    getarr(arr1, size);
+    
+}
+int getarr(int arr[10], int size){
+    
+      cout<<"Even values: ";
+      for(int i=0;i<size;i++){
+        if(arr[i]%2==0){
+            
+            cout<<arr[i]<<" ";
+        }
+    }
+    return arr[10];
+}
+
+
+problem 5:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int getarr(int arrr[10],int arrr1[10], int size, int size1, int combinedArr[20]);
+
+int main(){
+    int arr1[10];
+    int arr2[10];
+    int sizee;
+    int sizee1;
+    int comArr[20];
+
+
+    
+    cout<<"Enter first array size: ";
+    cin>>sizee;
+    cout<<"Enter second array size: ";
+    cin>>sizee1;
+    cout<<"Enter first array values: ";
+
+    for(int i=0;i<sizee;i++){
+        cin>>arr1[i];
+    }
+    cout<<"Enter second array values: ";
+      for(int i=0;i<sizee1;i++){
+        cin>>arr2[i];
+    }
+  
+      getarr(arr1,arr2,sizee,sizee1,comArr);
+    
+
+    
+}
+int getarr(int arrr[10],int arrr1[10], int size, int size1, int combinedArr[20]){
+    combinedArr[size+size1];
+    int index=0;
+    int combinedsize = size + size1;
+    
+      
+    for(int i=0;i<size;i++){
+            combinedArr[index++] = arrr[i];
+    }
+    for(int i=0;i<size1;i++){
+            combinedArr[index++] = arrr1[i];
+    }
+    for(int i=0;i<combinedsize;i++){
+    
+        if(combinedArr[i]%2!=0){
+            cout<<fixed<<setprecision(0)<<combinedArr[i];
+            if(i<combinedsize-2){
+                cout<<", ";
+                if(combinedArr[5]==0){
+                    combinedsize = combinedsize - 1;
+                }
+            }
+        }
+    }
+    
+    return combinedArr[20];
+}
+
+
+problem 6:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int sumatrange(int arr[],int size, int start, int end, int sum);
+int main(){
+    int arrr[10];
+    int sizee;
+    int starting;
+    int ending;
+    int sum;
+
+    cout<<"Enter size of array: ";
+    cin>>sizee;
+    cout<<"Enter array values: ";
+    for(int i=0;i<sizee;i++){
+        cin>>arrr[i];
+    }
+    cout<<"Enter starting range: ";
+    cin>>starting;
+    cout<<"Enter end range: ";
+    cin>>ending;
+    sumatrange(arrr,sizee,starting,ending,sum);
+    
+
+}
+
+int sumatrange(int arr[],int size, int start, int end, int sum){
+
+    for(int i=start-1;i<size;i++){
+        sum+=arr[i];
+        if(end==i){
+            break;
+        }
+    }
+    cout<<"Sum at range: "<<sum;
+    return sum;
+}

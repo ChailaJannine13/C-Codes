@@ -1,0 +1,172 @@
+#Topic 3:
+
+
+problem 1:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int a;
+
+    cout<<"Enter an integer: ";
+    cin>>a;
+
+    
+
+    if(a==0){
+        cout<<"Zero";
+    }
+    else if(a%2==1){
+        cout<<"Odd";
+    }
+    else if(a%2==0){
+        cout<<"Even";
+    }
+}
+
+problem 2:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    char gender;
+
+    cout<<"Enter a character: ";
+    cin>>gender;
+
+    if(gender=='M'||gender=='m'){
+        cout<<"Male";
+    }
+    else if(gender=='F'||gender=='f'){
+        cout<<"Female";
+    }
+    else{
+        cout<<"Prefer not to say";
+    }
+
+    
+    
+}
+
+problem 3:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int a,b;
+    int temp;
+    cout<<"Enter first number: ";
+    cin>>a;
+    cout<<"Enter second number: ";
+    cin>>b;
+
+    temp=a+b;
+    
+    if(temp>0){
+        cout<<"Positive";
+    }
+    else if(temp<0){
+        cout<<"Negative";
+    }
+    else if(temp==0){
+        cout<<"Zero";
+    }
+}
+
+problem 4:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    double a,b,c;
+    double temp;
+
+    cout<<"Enter decimal value 1: ";
+    cin>>a;
+    cout<<"Enter decimal value 2: ";
+    cin>>b;
+    cout<<"Enter decimal value 3: ";
+    cin>>c;
+
+    temp=a+b+c;
+ 
+
+    if(temp<200000){
+        cout<<"average";
+    }
+    else if(temp>=200000 && temp<400000){
+        cout<<"rich";
+    }
+    else if(temp>=400000 && temp<600000){
+        cout<<"super rich";
+    }
+    else if(temp>600000){
+        cout<<"crazy rich";
+    }
+
+}
+
+problem 5:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int a;
+
+    cout<<"Enter an integer: ";
+    cin>>a;
+
+    
+    if(a%7==0 && a%3!=0){
+        cout<<"Code";
+    }
+    else if(a%3==0 && a%7!=0){
+        cout<<"Chum";
+        
+    }
+    else if(a%7==0 && a%3==0){
+        cout<<"CodeChum";
+    }
+    else{
+        cout<<"None of the above";
+    }
+}
+
+problem 6:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int x,y;
+
+    cout<<"Enter integer x: ";
+    cin>>x;
+    cout<<"Enter integer y: ";
+    cin>>y;
+
+    if(x>y){
+        cout<<"x is greater than y";
+    }
+    else if(x<y){
+        cout<<"x is lesser than y";
+    }
+    else if(x==y){
+        cout<<"x is equal to y";
+    }
+}

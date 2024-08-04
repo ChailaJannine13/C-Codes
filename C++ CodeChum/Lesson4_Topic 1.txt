@@ -1,0 +1,23 @@
+#Topic 1:
+
+
+A way to organize code into reusable blocks
+
+An input value passed to the function
+
+To send a value back as the functions result
+
+To perform specific task and promote modularity, reusability, and abstraction
+
+it simplifies code complexity, allowing programmers to work together
+
+using the same function in multiple parts of the program
+
+by dividing a program into smaller functions with specific tasks.
+
+it hides the implementation details and only provides the necessary information
+
+Modularity
+
+it lets you define a book of code once and use it multiple times
+

@@ -1,0 +1,208 @@
+#Topic 5:
+
+
+problem 1:
+
+#include<iostream>
+using namespace std;
+
+int getSum(int a, int  b){
+    int sum=a+b;
+    return sum;
+}
+int main(void) {
+    int a, b;
+
+    cout << "Enter first number: ";
+    cin >> a;
+    cout << "Enter second number: ";
+    cin >> b;
+
+    int sum = getSum(a, b);
+
+    cout << "Sum = " << sum;
+
+    return 0;
+}
+
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+
+int max(int a,int b, int c){
+    int maxVal=0;
+    if(a>b){
+        if(a>c){
+          maxVal=a;
+        }
+    }
+    if(b>a){
+        if(b>c){
+            maxVal=b;
+        }
+    }
+    if(c>a){
+        if(c>b){
+             maxVal=c;
+        }
+    }
+    return maxVal;
+}
+int main(){
+
+    int x, y, z;
+
+    cout<<"Enter first number: ";
+    cin>>x;
+    cout<<"Enter second number: ";
+    cin>>y;
+    cout<<"Enter third number: ";
+    cin>>z;
+
+    cout<<"Maximum Value: "<<max(x,y,z);
+
+    return 0;
+    
+}
+
+
+problem 3:
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+char combineChars(char a, char b){
+    char x;
+        x=a;
+    cout<<x<<endl;
+        x=b;
+    cout<<x;
+        
+    return x;
+}
+int main(){
+    char x,y;
+    
+    cout<<"Enter first character: ";
+    cin>>x;
+    cout<<"Enter second character: ";
+    cin>>y;
+    combineChars(x,y);
+}
+
+
+problem 4:
+
+#include<iostream>
+using namespace std;
+
+int isDivisibleBy(int a, int  b){
+
+    if(a%b==0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+int main(){
+    int x,y;
+    bool z;
+
+    cout<<"Enter first number: ";
+    cin>>x;
+    cout<<"Enter second number: ";
+    cin>>y;
+    z = isDivisibleBy(x,y);
+    if(z){
+        cout<<"yes";
+    }
+    else{
+        cout<<"no";
+    }
+}
+
+problem 5:
+
+#include<iostream>
+#include<vector>
+#include<sstream>
+#include<iomanip>
+#include<limits>
+using namespace std;
+std::pair<int, double> average(const std:: vector<int>&numbers){
+    int sum = 0;
+    for(int num:numbers){
+        sum+=num;
+    }
+    double average = static_cast<double>(sum)/numbers.size();
+    return{sum, average};
+}
+int main(){
+    int x;
+    
+    std::cout<<"Enter size of array: ";
+    std::cin>>x;
+
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    std::cout<<"Enter the numbers: ";
+    std::string input;
+    std::getline(std::cin,input);
+    std::istringstream iss(input);
+
+    int num;
+    std::vector<int>numbers;
+    while(iss>>num){
+        numbers.push_back(num);
+    }
+    auto result = average(numbers);
+
+    std::cout<<fixed<<setprecision(2)<<"Average: "<<result.second;
+    return 0;
+}
+
+
+problem 6:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+double min(double a,double b, double c){
+    double minval=0;
+    if(a<b){
+        if(a<c){
+          minval=a;
+        }
+    }
+    if(b<a){
+        if(b<c){
+            minval=b;
+        }
+    }
+    if(c<a){
+        if(c<b){
+             minval=c;
+        }
+    }
+    return minval;
+}
+int main(){
+
+    double x, y, z;
+
+    cout<<"Enter first value: ";
+    cin>>x;
+    cout<<"Enter second value: ";
+    cin>>y;
+    cout<<"Enter third value: ";
+    cin>>z;
+
+    cout<<fixed<<setprecision(3)<<"Minimum Value: "<<min(x,y,z);
+
+    return 0;
+    
+}

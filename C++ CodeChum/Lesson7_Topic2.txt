@@ -1,0 +1,62 @@
+#Topic 2:
+
+
+problem 1:
+
+#include "operations.h"
+
+void multiplyBy3(int* n) {
+    *n = *n*3;
+}
+
+problem 2:
+
+#include "swap.h"
+
+void swap(int* a, int* b) {
+    int x = *a;
+
+    *a = *b;
+    *b = x;
+
+}
+
+
+problem 3:
+
+#include "mathoperations.h"
+
+void addValue(float* a, float* b) {
+    *a = *a + *b;
+
+}
+
+
+problem 4:
+
+#include "mathutil.h"
+#include <cmath>
+
+void updateValue(int* n) {
+    *n = std::pow(*n, 2);
+}
+
+
+problem 5:
+
+#include "operations.h"
+
+void addByReference(int x, int* y) {
+   *y = *y+x;
+}
+
+
+problem 6:
+
+#include "arrayoperations.h"
+
+void negateElements(int* arr, int n) {
+    for(int i = 0; i < n; ++i){
+        arr[i] = -arr[i];
+    }
+}

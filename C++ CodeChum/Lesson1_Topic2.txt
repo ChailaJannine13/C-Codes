@@ -1,0 +1,175 @@
+
+#Topic 2:
+
+problem 1:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+
+    int age;
+    cout<<"Enter age: ";
+    cin>>age;
+
+    if(age>17){
+        cout<<"adult";
+    }
+    else if(age<18){
+        cout<<"minor";
+    }
+}
+
+problem 2:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int a,b,c;
+    int temp;
+
+    cout<<"Enter a: ";
+    cin>>a;
+    cout<<"Enter b: ";
+    cin>>b;
+    cout<<"Enter c: ";
+    cin>>c;
+
+    temp=a+b;
+
+    if(temp>c){
+        cout<<a<<" + "<<b<<" > "<<c<<" = "<<"yes";
+    }
+    else{
+     cout<<a<<" + "<<b<<" > "<<c<<" = "<<"no";   
+    }
+    
+}
+
+problem 3:
+
+#include <iostream>
+using namespace std;
+
+int main(void) {
+	int total = 50;
+    int a,b,c;
+    int temp,temp1;
+
+    // Hey there, start typing your C++ code here...
+    cout<<"Enter first positive integer: ";
+    cin>>a;
+    cout<<"Enter second positive integer: ";
+    cin>>b;
+    temp=a%2;
+    temp1=b%2;
+    
+    if(temp==0 && temp1==0){
+        total=total+a;
+        total=total+b;
+    } 
+    else if(temp==1 && temp1==0){
+        total=total-a;
+        total=total+b;
+    }
+    if(temp==1 && temp1==1){
+        total= total-a;
+        total=total-b;
+    }
+    else if(temp==0 && temp1==1){
+        total= total+a;
+        total= total-b;
+    }
+   
+    cout<<total;
+   
+    
+    
+}
+
+problem 4:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int a=2022;
+    int b,c;
+    cout<<"Enter your birth year: ";
+    cin>>b;
+    
+    c=2022-b;
+    
+    if(60<=c){
+        cout<<"senior citizen";
+    }
+    else{
+        cout<<"not senior citizen";
+    }
+}
+
+problem 5:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    char a;
+    
+    cout<<"Enter a character: ";
+    cin>>a;
+
+    if(a=='y'||a=='Y'){
+        cout<<"Here's your ice cream";
+    }
+    else{
+        cout<<"Okay, maybe some other time";
+    }
+}
+
+problem 6:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    double x,y,z;
+
+    cout<<"Enter x: ";
+    cin>>x;
+    cout<<"Enter y: ";
+    cin>>y;
+    cout<<"Enter z: ";
+    cin>>z;
+        
+    if(z>x && z<y ){
+        cout<<z<<" is within "<<x<<" and "<<y;
+       }
+    if(z<x && z>y){
+        cout<<z<<" is within "<<x<<" and "<<y;
+       }
+    if(z<x && z<y){
+        cout<<z<<" is outside "<<x<<" and "<<y;
+       }
+    if(z==x && z<=y){
+        cout<<z<<" is within "<<x<<" and "<<y;
+       }
+    if(z>=x && z==y){
+        cout<<z<<" is within "<<x<<" and "<<y;
+       }
+    else if(z>x && z>y){
+        cout<<z<<" is outside "<<x<<" and "<<y;
+    }
+   
+}

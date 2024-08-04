@@ -1,0 +1,262 @@
+#Topic 5:
+
+
+problem 1:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int x;
+    char y;
+    cout<<"Enter years of work: ";
+    cin>>x;
+    cout<<"Enter kind of work: ";
+    cin>>y;
+
+    if(x<2){
+        if(y=='B'||y=='b'){
+            cout<<"Salary: 10,000";
+        }
+        else if(y=='W'||y=='w'){
+            cout<<"Salary: 20,000";
+        }
+    }
+    if(x<5 && x>=2){
+        if(y=='B'||y=='b'){
+            cout<<"Salary: 12,000";
+        }
+        else if(y=='W'||y=='w'){
+            cout<<"Salary: 40,000";
+        }
+    }
+    if(x>=5){
+        if(y=='B'||y=='b'){
+            cout<<"Salary: 15,000";
+        }
+        else if(y=='W'||y=='w'){
+            cout<<"Salary: 75,000";
+        }
+    }
+    
+}
+
+
+problem 2:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    
+    int x;
+    int temp;
+    
+    cout<<"Enter current pocket money: ";
+    cin>>x;
+
+    temp = x%10;
+ 
+    
+    if(temp==7){
+        cout<<x;
+        cout<<"\nSuch lucky money!";
+    }
+    if(temp<0 || temp!=7 || temp==100){
+        if(temp<0){
+            cout<<"Stop lying, tell me what's in your pocket!";
+        }
+        else{
+            cout<<x;
+            cout<<"\nJust normal money.";
+        }
+        
+    }
+    
+    
+    
+
+}
+
+problem 3:
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+
+int main(){
+
+    string a;
+    char c;
+    int b,d;
+    cout<<"Enter name: ";
+    getline(cin,a);
+
+
+    c=a.back();
+
+    if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+        cout<<"Enter age: ";
+        cin>>b;
+        if(b%2==0){
+            cout<<"Wow, you're special!";
+        }
+        else if(b%2==1){
+            cout<<"Enter birth year: ";
+            cin>>d;
+            if(d%2==0){
+                cout<<"Oh, you're still special!";
+            }
+            else{
+                cout<<"You will be special next year.";
+            }
+    }
+    }
+    else{
+        cout<<"You're awesome!";
+        
+    }
+ 
+
+}
+
+problem 4:
+
+#include <iostream>
+#include<cmath>
+
+using namespace std;
+
+
+int main() {
+    int total = 10;
+
+    int x,temp,y;
+    // Hey there, start typing your C++ code here...
+    cout<<"Enter an integer: ";
+    cin>>x;
+    
+    if(x>0){
+        if(x%2==0){
+            temp=pow(x,2);
+            cout<<temp+total;
+        }
+        else if(x%2==1){
+            temp=x*x*x;
+            cout<<temp+total;
+        }
+    }
+    else if(x<0){
+            cout<<"Enter another integer: ";
+            cin>>y;
+            temp=pow(x,y);
+            cout<<temp+total;
+        }
+    else{
+        cout<<"Nothing happened.";
+    }
+}
+
+problem 5:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int x;
+    char y,z;
+    cout<<"Choose the programming language you like best: ";
+    cin>>x;
+
+    if(x==1){
+        cout<<"You like C best";
+    }
+    else if(x==2){
+        cout<<"You like C++ best";
+    }
+    else if(x==3){
+        cout<<"You like Java best";
+    }
+    else if(x==4){
+        cout<<"You like C# best";
+    }
+    else if(x==5){
+        cout<<"You like Python best";
+        if(x==5){
+            cout<<"\nEnter type of development: ";
+            cin>>y;
+            if(y=='A'||y=='a'){
+                cout<<"Web";
+            }
+            else if(y=='B'||y=='b'){
+                cout<<"Data Analytics";
+            }
+            else if(y=='C'||y=='c'){
+                cout<<"Backend";
+                if(y=='C'){
+                    cout<<"\nDo you know any frameworks? ";
+                    cin>>z;
+                    if(z=='Y'||z=='y'){
+                        cout<<"Wow, you're good!";
+                    }
+                    else if(z=='N'||z=='n'){
+                
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+problem 6:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int x,y,z;
+
+    cout<<"Enter x: ";
+    cin>>x;
+    cout<<"Enter y: ";
+    cin>>y;
+    cout<<"Enter z: ";
+    cin>>z;
+
+    if(z==2){
+        if(z<=3){
+            cout<<z<<" is just within "<<x<<" and "<<y;
+        }
+    }
+    else if(z==5){
+        if(z>y){
+            cout<<z<<" is farther from "<<x;
+        }
+    }
+    else if(z==-1){
+        if(z<x){
+            cout<<z<<" is farther from "<<y;
+        }
+    }
+    else if(z==1){
+        if(z<y){
+            cout<<z<<" is just within "<<x<<" and "<<y;
+        }
+    }
+    else if(z==3){
+        if(z>1){
+            cout<<z<<" is just within "<<x<<" and "<<y;
+        }
+    }
+    
+}

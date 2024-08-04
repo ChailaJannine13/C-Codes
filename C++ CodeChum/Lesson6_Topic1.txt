@@ -1,0 +1,208 @@
+#Topic 1:
+
+
+problem 1:
+
+#include<iostream>
+using namespace std;
+
+struct Student{
+
+    string name;
+    int age;
+
+};
+
+int main(){
+
+    Student Student_1;
+
+    cout<<"Enter the name of the student: ";
+    cin>>Student_1.name;
+    cout<<"Enter the age of the student: ";
+    cin>>Student_1.age;
+
+    cout<<"Name: "<<Student_1.name<<endl;
+    cout<<"Age: "<<Student_1.age;
+    
+}
+
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+
+struct ProgrammingLanguage{
+
+    string name;
+    string extension;
+
+};
+
+int main(){
+
+    ProgrammingLanguage lan1, lan2;
+
+    lan1.name = "C";
+    lan2.name = "C";
+    lan1.extension = ".c";
+    lan2.extension = ".c";
+
+    return 0;
+    
+}
+
+
+problem 3:
+
+#include<iostream>
+using namespace std;
+
+struct savings{
+    int fSum;
+    int sSum;
+};
+int main(){
+
+    savings Esum, Osum;
+    Esum.fSum;
+    Osum.sSum;
+    int val;
+    int arr[10];
+
+    Esum.fSum;
+    Osum.sSum;
+    
+    cout<<"Enter the number of values: ";
+    cin>>val;
+    
+    for(int i = 1; i<=val; i++){
+        cout<<"Enter value "<<i<<": ";
+        cin>>arr[i];
+        if(i%2==1){
+            Osum.sSum+=arr[i];
+        }
+        else{
+            Esum.fSum+=arr[i];
+        }
+    }
+
+    cout<<"Savings: "<<Osum.sSum<<" bills and "<<Esum.fSum<<" coins";
+
+    return 0;
+    
+}
+
+problem 4:
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+struct Book{
+
+    int page;
+    string title;
+    string author;
+
+};
+
+int main(){
+
+    Book pages,titles,authors;
+
+    pages.page = 0;
+    titles.title =" ";
+    authors.author = " ";
+
+    cout<<"Enter the number of pages: ";
+    cin>>pages.page;
+    cin.ignore();
+    cout<<"Enter the title: ";
+    getline(cin, titles.title);
+    cout<<"Enter the author: ";
+    getline(cin, authors.author);
+    cout<<"Title: "<<titles.title;
+    cout<<endl;
+    cout<<"Author: "<<authors.author;
+    cout<<endl;
+    cout<<"Number of pages: "<<pages.page;
+    
+}
+
+
+problem 5:
+
+#include<iostream>
+using namespace std;
+
+struct Person{
+    string name;
+};
+struct BankAccount{
+    double balance;
+    
+    Person names;
+};
+
+int main(){
+    BankAccount account;
+    account.balance = 1000;
+    
+    cout<<"Enter a name: ";
+    cin>>account.names.name;;
+    
+    return 0;
+}
+
+
+problem 6:
+
+#include<iostream>
+using namespace std;
+
+struct Date{
+
+    int month;
+    int day;
+    int year;
+
+};
+
+int main(){
+    Date mm,dd,yyyy;
+    mm.month = 0;
+    dd.day = 0;
+    yyyy.year = 0;
+    bool tralse = true;
+    
+    cout<<"Enter the year: ";
+    cin>>yyyy.year;
+    if(yyyy.year<=0){
+        cout<<"Error: Year must be greater than 0!"<<endl;
+        cout<<"Enter the year: ";
+        cin>>yyyy.year;
+    }
+    
+    cout<<"Enter the month: ";
+    cin>>mm.month;
+    if(1>mm.month||mm.month>12){
+        cout<<"Error: Month must be between 1 and 12!"<<endl;
+        cout<<"Enter the month: ";
+        cin>>mm.month;
+    }
+
+    cout<<"Enter the day: ";
+    cin>>dd.day;
+        if(1>dd.day||dd.day>31){
+            cout<<"Error: Day must be between 1 and 31!"<<endl;
+            cout<<"Enter the day: ";
+            cin>>dd.day;
+        }
+        
+
+    cout<<mm.month<<"/"<<dd.day<<"/"<<yyyy.year;
+    return 0;
+    
+}

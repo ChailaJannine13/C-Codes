@@ -1,0 +1,147 @@
+#Topic 2:
+
+
+problem 1:
+
+#include <iostream>
+using namespace std;
+int main(void) {
+    int x[10] = {4, 5, 1, -10, 3, 5, 2, 1, 22, 94};
+    int y=x[4]+x[5]+x[8];
+    
+    // Hey there, start typing your C++ code here...
+    cout<<y;
+}
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int x[10];
+    int y;
+    int index = 0;
+
+    cout<<"Enter array size: ";
+    cin>>y;
+    cout<<"Enter elements of the array:"<<endl;
+    for(int j=0; j<y;j++){
+        cin>>x[j];
+    }
+    cout<<"Enter an index: ";
+    cin>>index;
+    cout<<x[index];
+  
+}
+
+
+problem 3:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int x[10];
+    int y;
+    int z;
+
+    cout<<"Enter array size: ";
+    cin>>y;
+    cout<<"Enter elements of the array:"<<endl;
+    for(int j=0; j<y;j++){
+        cin>>x[j];
+        z=j;
+    }
+    cout<<"Last element: "<<x[z];
+}
+
+problem 4:
+
+#include <iostream>
+#include<iomanip>
+using namespace std;
+int main(void) {
+    float numArr[10] = {3.14, 9.2, 8.812, 10.5, 0.4, -23.23, -1.56, 12.3, 9.45, -0.968};
+    float x;
+
+    x=numArr[0]*numArr[4];
+    // Hey there, start typing your C++ code here...
+    cout<<fixed<<setprecision(2)<<x;
+    
+    
+}
+
+
+problem 5:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int x[10];
+    int z[10];
+    int i,l,y,t;
+    
+    int sum=0;
+    int product=0;
+
+    cout<<"Enter size of the first array: ";
+    cin>>y;
+    cout<<"Enter elements of the first array:"<<endl;
+    for(int j=0; j<y;j++){
+        cin>>x[j];
+
+    }
+
+    cout<<"Enter size of the second array: ";
+    cin>>i;
+    cout<<"Enter elements of the second array:"<<endl;
+    for(int k=0; k<i;k++){
+        cin>>z[k];
+        l=k;
+        
+    }
+    sum=x[0]+z[l];
+    cout<<"Sum of first and last: "<<sum<<endl;
+    t=l-1;
+    product=x[1]*z[t];
+    cout<<"Product of second and second to the last: "<<product;
+
+    
+}
+
+
+problem 6:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    int y[10];
+    int x,t,l,i;
+    
+    
+    
+    cout<<"Enter array size: ";
+    cin>>x;
+    cout<<"Enter elements of the array: "<<endl;
+    for(int j=0;j<x;j++){
+        cin>>y[j];     
+    }
+    if(x%2==0){
+        t=x/2-1;
+        i=x/2;
+        cout<<"Medians: "<<y[t]<<" and "<<y[i];
+    }
+    else if(x%2!=0){
+        l=x/2;
+        cout<<"Median: "<<y[l];
+    }
+    
+}	

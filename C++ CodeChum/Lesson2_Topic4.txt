@@ -1,0 +1,194 @@
+#Topic 4:
+
+
+problem 1:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int x;
+
+    cout<<"Enter n: ";
+    cin>>x;
+
+    
+    for(int j=0;j<x;j++){
+            
+        for(int y=0;y<=j;y++){
+            cout<<"@";
+        }
+        cout<<endl;
+    }
+    
+}
+
+
+problem 2:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){
+
+
+    int x;
+    int y;
+    int temp=0;
+    cout<<"Enter n: ";
+    cin>>x; 
+    cout<<"  ";
+    for(int z=0; z<=x;z++){
+        cout <<z<<" ";
+       
+    }
+    cout<<"\n";
+    for(int j = 0; j <= x; ++j){
+          
+          cout<<j<<" ";
+    for(y = 0; y <= x; ++y){
+          cout << y * j<<" ";
+    }
+    cout <<endl;
+  }
+}
+
+
+problem 3:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int x=0;
+    int y=0;
+    int k=0;
+    cout<<"Enter n: ";
+    cin>>x;
+    cout<<"Enter y: ";
+    cin>>y;
+    
+    for(int j = 0; j <x; j++){
+             
+        for(int k = 0; k < x; k++){
+            
+            if((j+1)==y){
+            cout<<" ";
+                break;
+            }
+            cout<<"*";
+        
+        }
+        cout<<endl;
+        
+    }
+}
+
+
+problem 4:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){
+
+
+    int x;
+    int y;
+    int temp=0;
+    cout<<"Enter n: ";
+    cin>>x; 
+    cout<<"  ";
+    for(int z=0; z<=x;z++){
+        cout <<z<<" ";
+       
+    }
+    cout<<"\n";
+    for(int j = 0; j <= x; ++j){
+          
+          cout<<j<<" ";
+    for(y = 0; y <= x; ++y){
+          cout << y + j<<" ";
+    }
+    cout <<endl;
+  }
+}
+
+
+problem 5:
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    string x[7]={"  Day 1","  Day 2","  Day 3","  Day 4",
+    "  Day 5","  Day 6","  Day 7"};
+    int y;
+    cout<<"Enter number of weeks: ";
+    cin>>y;
+
+    
+    for(int k=0;k<y;k++){
+        cout<<"Week #"<<k+1<<endl;
+        for(int j=0; j<7;j++){
+            cout<<x[j]<<endl;
+            if(j==6){
+                cout<<endl;
+            }
+        }
+          
+    }
+        
+    
+    
+}
+
+
+problem 6:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+
+    int n;
+    int count = 0;
+    int count1 = 0;
+    int k = 0;
+
+    cout<<"Enter n: ";
+    cin>>n;
+
+    
+    for(int i = 1; i <= n; ++i) {
+        for(int space = 1; space <= n-i; space++) {
+            cout << " ";
+            count++;
+        }
+
+        while(k != 2*i-1) {
+            if (count <= n-1) {
+                cout <<"%"<<"";
+                count++;
+            }
+            else {
+                count1++;
+                cout <<"%"<<"";
+            }
+            k++;
+        }
+        count1 = count = k = 0;
+
+        cout << endl;
+    }
+
+    
+}	

@@ -1,0 +1,238 @@
+#Topic 4:
+
+
+problem 1:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    char category;
+
+    cout<<"Please enter age category: ";
+    cin>>category;
+
+    switch(category){
+        case 'B':
+            cout<<"Baby = P0.00";
+            break;
+        case 'T':
+            cout<<"Teenager = P2000.00";
+            break;
+        case 'A':
+            cout<<"Adult = P15000.00";
+            break;
+        case 'S':
+            cout<<"Senior Citizen = P4000.00";
+            break;
+    }
+}
+
+
+problem 2:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int i;
+    cout<<"Enter the day of the week: ";
+    cin>>i;
+
+    switch(i){
+
+        case 1:
+            cout<<"Sunday";
+            break;
+        case 2:
+            cout<<"Monday";
+            break;
+        case 3:
+            cout<<"Tuesday";
+            break;
+        case 4:
+            cout<<"Wednesday";
+            break;
+        case 5:
+            cout<<"Thursday";
+            break;
+        case 6:
+            cout<<"Friday";
+            break;
+        case 7:
+            cout<<"Saturday";
+            break;
+    }
+    
+}
+
+problem 3:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){
+
+    double a,b;
+    char op;
+
+    cout<<"Enter first number: ";
+    cin>>a;
+    cout<<"Enter second number: ";
+    cin>>b;
+    cout<<"Enter operation (+, -, *, or /): ";
+    cin>>op;
+
+    switch(op){
+        case '+':
+            cout<<fixed<<setprecision(2)<<"Result: "<<a+b;
+            break;
+        case '-':
+            cout<<fixed<<setprecision(2)<<"Result: "<<a-b;
+            break;
+        case '*':
+            cout<<fixed<<setprecision(2)<<"Result: "<<a*b;
+            break;
+        case '/':
+            cout<<fixed<<setprecision(2)<<"Result: "<<a/b;
+            break;
+        default:
+            cout<<"Result: -999.99";
+            break;
+        
+    }
+}
+
+problem 4:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+
+    char grade;
+
+    cout<<"Enter your grade: ";
+    cin>>grade;
+
+    switch(grade){
+
+        case 'A':
+            cout<<"Good Job";
+            break;
+        case 'B':
+            cout<<"Good Job";
+            break;
+        case 'C':
+            cout<<"You are doing okay";
+            break;
+        case 'D':
+            cout<<"You need to study harder";
+            break;
+        case 'F':
+            cout<<"You need to study harder";
+            break;
+        default:
+            cout<<"Stop lying and tell me your actual grade";
+            break;
+
+            
+    }
+}
+
+problem 5:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int date;
+
+    cout<<"Enter an integer representing month: ";
+    cin>>date;
+
+    switch(date){
+        case 1:
+            cout<<"January";
+            break;
+        case 2:
+            cout<<"February";
+            break;
+        case 3:
+            cout<<"March";
+            break;
+        case 4:
+            cout<<"April";
+            break;
+        case 5:
+            cout<<"May";
+            break;
+        case 6:
+            cout<<"June";
+            break;
+        case 7:
+            cout<<"July";
+            break;
+        case 8:
+            cout<<"August";
+            break;
+        case 9:
+            cout<<"September";
+            break;
+        case 10:
+            cout<<"October";
+            break;
+        case 11:
+            cout<<"November";
+            break;
+        case 12:
+            cout<<"December";
+            break;
+        default:
+            cout<<"Invalid month";
+            break;
+    }
+}
+
+problem 6:
+
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+    int JHS;
+    cout<<"Enter grade level: ";
+    cin>>JHS;
+
+    switch(JHS){
+
+        case 1:
+            cout<<"Freshies";
+            break;
+        case 2:
+            cout<<"Sophomores";
+            break;
+        case 3:
+            cout<<"Juniors";
+            break;
+        case 4:
+            cout<<"Seniors";
+            break;
+        default:
+            cout<<"N/A";
+            break;
+            
+    }
+
+}

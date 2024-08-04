@@ -1,0 +1,97 @@
+#Topic 2:
+
+
+problem 1:
+
+#include <fstream>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter the number of people: ";
+    cin >> n;
+    
+
+    cin.ignore();
+
+
+    ofstream dataFile("data.csv");
+
+
+    for (int i = 1; i <= n; ++i) {
+        string name;
+        int age;
+        char gender;
+
+        cout << "Enter data for person " << i << ":\n";
+
+        cout << "Enter Name: ";
+        getline(cin, name);
+
+        cout << "Enter Age: ";
+        cin >> age;
+
+        cout << "Enter Gender: ";
+        cin >> gender;
+        cin.ignore();
+
+        dataFile << name << "," << age << "," << gender << "\n";
+    }
+    dataFile.close();
+    return 0;
+}
+
+
+problem 2:
+
+#include <iostream>
+#include <fstream>
+#include <sstream>
+
+using namespace std;
+
+int main() {
+    ofstream csvFile("numbers.csv");
+    int count = 0;
+    for (int i = 1; i <= 100; i++) {
+        csvFile << i;
+        count++;
+        if (count % 10 == 0 && i != 100) {
+            csvFile << endl;
+        } else if (i != 100) {
+            csvFile << ",";
+        }
+    }
+    csvFile.close();
+
+    // Reading from file
+    ifstream readFile("numbers.csv");
+    string line;
+    int rowCount = 0;
+    while (getline(readFile, line)) {
+        stringstream ss(line);
+        string number_str;
+        int numbersPrinted = 0;
+        while (getline(ss, number_str, ',')) {
+            int number = stoi(number_str); // Convert string to integer
+            if (number % 2 == 0) { // Check if the number is even
+                cout << number;
+                numbersPrinted++;
+                if (numbersPrinted < 5) { // Print comma if not the last number in the row
+                    cout << ", ";
+                } else { // Print new line if it's the last number in the row
+                    cout << endl;
+                }
+            }
+        }
+    }
+
+    readFile.close();
+
+    return 0;
+}
+
+

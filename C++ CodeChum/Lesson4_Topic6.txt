@@ -1,0 +1,157 @@
+#Topic 6:
+
+
+problem 1:
+
+#include<iostream>
+using namespace std;
+
+int factorial(int i){
+    if(i==0||i==1){
+        return 1;
+    }
+    else{
+        return i*factorial(i-1);
+    }
+    
+}
+
+int main(){
+
+    int x,y;
+    cout<<"Enter a number: ";
+    cin>>x;
+    y=x;
+    x=factorial(x);
+    cout<<"Factorial of "<<y<<": "<<x;
+    
+    
+}
+
+
+problem 2:
+
+#include<iostream>
+using namespace std;
+
+void printRecursively(int current, int n) {
+    if(current <= n) {
+        cout << current << " ";
+        return printRecursively(current +1, n);
+    }
+}
+
+int main(void) {
+    int n;
+    
+    cout << "Enter n: ";
+    cin >> n;
+    
+    printRecursively(1, n);
+    
+    return 0;
+}
+
+
+problem 3:
+
+#include <iostream>
+using namespace std;
+
+int fib(int n) {
+    if (n <= 1) {
+        return n;
+    }
+
+    return fib(n - 1) + fib(n - 2);
+}
+ 
+int main(void) {
+    int n;
+    
+    cout << "Enter which nth term: ";
+    cin >> n;
+    
+    cout << "Nth term = " << fib(n);
+
+    return 0;
+}
+
+problem 4:
+
+#include<iostream>
+using namespace std;
+
+int computeSum(int n) {
+    if (n != 0) {        
+        return n + computeSum(n - 1);
+    } else {
+        return n;
+    }
+}
+
+int main(void) {
+    int n;
+    
+    cout << "Enter n: ";
+    cin >> n;
+    
+    cout << "Sum = " << computeSum(n);
+    
+    return 0;
+}
+
+
+problem 5:
+
+
+#include<iostream>
+using namespace std;
+
+void printRecursively(int n) {
+    // TODO: Implement recursively
+    bool x=true;
+    
+    if(n>=1){
+        
+        cout<<n;
+        if(n!=1){
+            cout<<", ";
+        }
+        printRecursively(n-1);
+    }
+}
+
+int main(void) {
+    int n;
+    
+    cout << "Enter n: ";
+    cin >> n;
+    
+    printRecursively(n);
+    
+    return 0;
+}
+
+problem 6:
+
+#include<iostream>
+using namespace std;
+
+void printCodeChum(int n) {
+    if (n != 0) {
+        cout << "CodeChum" << endl;
+        printCodeChum(n - 1);
+    }
+}
+
+int main(void) {
+    int n;
+    
+    cout << "Enter n: ";
+    cin >> n;
+    
+    printCodeChum(n);
+    
+    return 0;
+}

@@ -1,0 +1,267 @@
+#Topic 1:
+
+
+problem 1:
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main(void) {
+    ofstream file("data.txt");
+    if(!file){
+        cout<<"Failed to open the file."<<endl;
+        return 1;
+    }
+    int n;
+    string names;
+    cout<<"Enter the number of names: ";
+    cin>>n;
+    cin.ignore();
+
+    
+    for (int i = 0; i < n; i++) {
+        cout<<"Enter name "<<i+1<<": ";
+        getline(cin, names);
+        file<<names<<endl;
+       
+    }
+    file.close();
+
+    return 0;
+}
+
+
+problem 2:
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(void) {
+    ofstream file("data.txt");
+    if(!file.is_open()){
+        cout<<"Failed to open the file."<<endl;
+        return 1;
+    }
+    for (int i = 1; i <= 100; i++) {
+        file << i << endl;
+    }
+    file.close();
+    ifstream input("data.txt");
+    if(!input.is_open()){
+        cout<<"Failed to open the file."<<endl;
+        return 1;
+    }
+    int num;
+    while(input>>num){
+        if(num%2==0){
+            cout<<num<<endl;
+        }
+    }
+    input.close();
+
+    return 0;
+}
+
+
+problem 3:
+
+#include <iostream>
+#include <fstream>
+#include <cctype>
+#include <string>
+#include <cstdio>
+#include <sys/stat.h>
+
+using namespace std;
+
+void createdir(const string& dir){
+    struct stat info;
+    if(stat(dir.c_str(), &info) !=0){
+        #if defined(_WIN32)
+            _mkdir(dir.c_str());
+        #else
+            mkdir(dir.c_str(),0777);
+        #endif
+    }
+    else if(!(info.st_mode & S_IFDIR)){
+        cerr<<"Error: "<<dir<<" is not a directory!"<<endl;
+        exit(1);
+    }
+    
+}
+
+  
+int main(void) {
+    string let = "letters";
+    string num = "numbers";
+    bool letfil = false;
+    bool numfil = false;
+    
+    ofstream letin;
+    ofstream numin;
+    
+    
+    char input;
+    while(true){
+        cout<<"Enter a character: ";
+        cin>>input;
+       
+        if(!letfil){
+            createdir(let);
+            letin.open(let+"/inputted.txt",ios::app);
+            if(!letin.is_open()){
+                cerr<<"Error";
+                return 1;
+            }
+            letfil =true;
+        }
+
+        if(!numfil){
+            createdir(num);
+            numin.open(num+"/inputted.txt",ios::app);
+            if(!numin.is_open()){ 
+                cerr<<"Error";
+                return 1;
+            }
+            numfil = true;
+        }
+   
+        if(isalpha(input)){
+            letin<<input<<endl;
+        }
+        else if(isdigit(input)){
+            numin<<input<<endl;
+        }
+        else{
+            break;
+        }
+    }
+    return 0;
+}	
+
+
+problem 4:
+
+#include <iostream>
+#include <fstream>
+#include <unordered_set>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int n;
+    string name;
+    unordered_set<string> nameSet;  // For checking duplicates
+    vector<string> names;  // For maintaining the order of input
+
+    // Ask the user for the number of names
+    cout << "Enter the number of names: ";
+    cin >> n;
+    cin.ignore(); // Ignore newline character left in the input buffer
+
+    // Get the names from the user
+    for (int i = 0; i < n; ++i) {
+        cout << "Enter name " << i + 1 << ": ";
+        getline(cin, name);
+        // Check if the name is not a duplicate
+        if (nameSet.find(name) == nameSet.end()) {
+            names.push_back(name);  // Add name to vector
+            nameSet.insert(name);  // Add name to set to keep track of duplicates
+        }
+    }
+
+    // Open a file to write the names
+    ofstream file("people.txt");
+    if (file.is_open()) {
+        for (const auto& unique_name : names) {
+            file << unique_name << endl; // Write each unique name to the file in the order entered
+        }
+        file.close();
+    } else {
+        cerr << "Unable to open file" << endl;
+    }
+
+    return 0;
+}
+
+
+problem 5:
+
+#include <iostream>
+#include <fstream>
+#include <cstdio> // For remove() function
+
+using namespace std;
+
+int main() {
+    // Create the text files
+    ofstream MyFile1("test1.txt");
+    MyFile1.close();
+    ofstream MyFile2("test2.txt");
+    MyFile2.close();
+    ofstream MyFile3("test3.txt");
+    MyFile3.close();
+
+    int choice;
+    int count = 0;
+
+    cout << "Enter file to remove: ";
+    cin >> choice;
+
+        if (choice == 1) {
+            remove("test1.txt");
+            }
+        else if (choice == 2) {
+            remove("test2.txt"); 
+            } 
+        else if (choice == 3) {
+            remove("test3.txt");
+            }
+
+    return 0;
+}
+
+problem 6:
+
+#include <fstream>
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+int main(void) {
+
+    ofstream dataFile;
+    dataFile.open("data.txt");
+    dataFile << "5\n3\n2\n";
+    dataFile.close();
+
+    ifstream inFile("data.txt");
+    vector<int> numbers;
+    int number;
+    while (inFile >> number) {
+        numbers.push_back(number);
+    }
+    inFile.close();
+
+
+    vector<int> squares;
+    for (int num : numbers) {
+        squares.push_back(pow(num, 2));
+    }
+
+    ofstream outFile("data.txt", ios::app);
+    outFile << "\n"; 
+    for (int square : squares) {
+        outFile << square << '\n';
+    }
+    outFile.close();
+
+    return 0;
+}
